@@ -1,6 +1,4 @@
-
-
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -90,6 +88,8 @@
             padding: 15px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            border-radius: 12px;
+            transition: all 0.3s ease;
         }
 
         .product:hover {
@@ -119,6 +119,23 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background 0.3s;
+            margin: 8px 5px;
+            display: inline-block;
+
+            .product button {
+                background: #007bff;
+                color: #fff;
+                border: none;
+                padding: 10px;
+                border-radius: 20px;
+                cursor: pointer;
+                margin: 6px 0;
+                width: 100%;
+            }
+        }
+
+        .product button:last-child {
+            margin-left: 10px;
         }
 
         .product button:hover {
@@ -169,35 +186,72 @@
             text-decoration: none;
             cursor: pointer;
         }
+
         @media (max-width: 768px) {
 
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
 
-    .banner h2 {
-        font-size: 24px;
-    }
+            .banner h2 {
+                font-size: 24px;
+            }
 
-    .banner p {
-        font-size: 14px;
-    }
+            .banner p {
+                font-size: 14px;
+            }
 
-    .product-list {
-        grid-template-columns: 1fr;
-    }
+            .product-list {
+                grid-template-columns: 1fr;
+            }
 
-    .modal-content {
-        width: 90%;
-    }
-}
+            .modal-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            header .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .banner h2 {
+                font-size: 22px;
+            }
+
+            .banner p {
+                font-size: 14px;
+            }
+
+            .product-list {
+                grid-template-columns: 1fr;
+            }
+
+            .product button {
+                width: 100%;
+                margin: 6px 0;
+            }
+
+            .modal-content {
+                width: 95%;
+            }
+        }
     </style>
 </head>
 
@@ -232,20 +286,21 @@
 
             <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
 
-    <img src="milk.png" alt="Sudha Milk" style="height: 250px; object-fit:contain;">
+                <img src="milk.png" alt="Sudha Milk" style="height: 250px; object-fit:contain;">
 
-    <h3>Sudha Milk</h3>
-    <p>Price: ₹50/L</p>
+                <h3>Sudha Milk</h3>
+                <p>Price: ₹50/L</p>
 
-    <button onclick="showDetails('Sudha Milk', 'Vitamin A, D', '3.5g', '1L', 'Great for drinking, cooking, and making desserts.')">
-        More Details
-    </button>
+                <button
+                    onclick="showDetails('Sudha Milk', 'Vitamin A, D', '3.5g', '1L', 'Great for drinking, cooking, and making desserts.')">
+                    More Details
+                </button>
 
-    <button onclick="orderNow('Sudha Milk','₹50/L')">
-        Order Now
-    </button>
+                <button onclick="orderNow('Sudha Milk','₹50/L')">
+                    Order Now
+                </button>
 
-</div>
+            </div>
 
             <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
 
@@ -334,22 +389,22 @@
 
             <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
 
-    <img src="lassi.png" alt="Sudha Lassi" 
-    style="height: 250px;object-fit:contain; margin-bottom:10px;">
+                <img src="lassi.png" alt="Sudha Lassi" style="height: 250px;object-fit:contain; margin-bottom:10px;">
 
-    <h3 style="margin-top:5px;">Sudha Lassi</h3>
+                <h3 style="margin-top:5px;">Sudha Lassi</h3>
 
-    <p style="margin:5px 0;">Price: ₹60/500ml</p>
+                <p style="margin:5px 0;">Price: ₹60/500ml</p>
 
-    <button style="margin-top:auto;" onclick="showDetails('Sudha Lassi', 'Probiotics, Calcium', '8g', '500ml', 'A refreshing drink, great for digestion and summer.')">
-        More Details
-    </button>
+                <button style="margin-top:auto;"
+                    onclick="showDetails('Sudha Lassi', 'Probiotics, Calcium', '8g', '500ml', 'A refreshing drink, great for digestion and summer.')">
+                    More Details
+                </button>
 
-    <button onclick="orderNow('Sudha Lassi','₹60/500ml')">
-        Order Now
-    </button>
+                <button onclick="orderNow('Sudha Lassi','₹60/500ml')">
+                    Order Now
+                </button>
 
-</div>
+            </div>
 
         </div>
     </section>
